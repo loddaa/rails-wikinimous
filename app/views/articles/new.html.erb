@@ -1,12 +1,14 @@
-<menu>
-  <%= link_to "Back", articles_path %>
-</menu>
+<div class="container">
+  <menu>
+    <%= link_to "↩️ Back", articles_path %>
+  </menu>
 
-<h1>Add a new article :</h1>
-<%= form_with model: @article do |form| %>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-  <%= form.label :content %>
-  <%= form.text_area :content, size: "60x10" %>
-  <%= form.submit "Save article" %>
+  <h1>Add a new article :</h1>
+  <%= form_with model: @article do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <%= form.label :content %>
+    <%= form.text_area :content, size: "60x10" %>
+    <%= form.submit "Save article" %>
 <% end %>
+</div>
